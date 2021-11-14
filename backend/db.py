@@ -1,7 +1,9 @@
 from products import productos
 from flask import Flask, app,jsonify,render_template,request
 from flaskext.mysql import MySQL as db
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 mysql = db()
 app.config["MYSQL_DATABASE_USER"] = "root"
 app.config["MYSQL_DATABASE_PASSWORD"] = ""
@@ -10,7 +12,6 @@ app.config["MYSQL_DATABASE_Host"] = "127.0.0.1"
 mysql.init_app(app)
 conexion = mysql.connect()
 cursor   = conexion.cursor()
-data = cursor.execute("SHOW TABLES")
 @app.route("/",methods = ["GET"])
 def index():
     return jsonify({"productos":productos})
