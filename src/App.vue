@@ -56,17 +56,15 @@
               <label><input type="checkbox" v-model="suscrito"><span>suscribirse al boletin de noticias.</span></label>
             </div>
           </div>
-
-          <div class="row">
+          <div class = "row">
             <button type="submit" class="btn indigo darken-4">AGREGAR USUARIO <i class="material-icons right">add_circle</i></button>
           </div>
         </form> 
       </div>
     </div>
-
-    <div class="row">
-      <div class="col m12">
-        <table class="table bordered striped">
+    <div class = "row">
+      <div class = "col m12">
+        <table class = "table bordered striped">
           <thead>
             <tr>
               <th>Nombre</th>
