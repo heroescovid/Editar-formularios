@@ -1,36 +1,36 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col m12 card-panel">
+  <div class = "container">
+    <div class = "row">
+      <div class = "col m12 card-panel">
         <form @submit.prevent = "agregarUsuario">
-            <div class="row">
-              <div class="col m4">
+            <div class = "row">
+              <div class = "col m4">
                 <label>Nombre</label>
-                <input type="text" v-model="nombre">
+                <input type = "text" v-model="nombre">
               </div>
-              <div class="col m4">
+              <div class = "col m4">
                 <label>Apellido</label>
-                <input type="text" v-model="apellido">
+                <input type = "text" v-model="apellido">
               </div>
             </div>
-          <div class="row">
-            <div class="col m4">
+          <div class = "row">
+            <div class = "col m4">
               <label>Edad</label>
-              <input type="number" v-model="edad">
+              <input type = "number" v-model="edad">
             </div>
-            <div class="col m4">
+            <div class = "col m4">
               <label>Estado Civil</label>
-              <select v-model="estado_civil">
-                <option value="">Seleccione</option>
-                <option value="C">Casado</option>
-                <option value="S">Soltero</option>
-                <option value="D">Divorciado</option>
-                <option value="V">Viudo</option>
+              <select v-model = "estado_civil">
+                <option value = "">Seleccione</option>
+                <option value = "C">Casado</option>
+                <option value = "S">Soltero</option>
+                <option value = "D">Divorciado</option>
+                <option value = "V">Viudo</option>
               </select>
             </div>
-            <div class="col m4">
+            <div class = "col m4">
               <label>Correo</label>
-            <input type="email" v-model="correo">
+            <input type = "email" v-model = "correo">
             </div>
           </div>
           
