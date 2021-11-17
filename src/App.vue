@@ -36,28 +36,27 @@
           
           <div class="row">
             <form @submit.prevent="agregarPasatiempo">
-              <div class="col m4 card-panel">
+              <div class = "col m4 card-panel">
                 <label>Pasatiempo</label>
-                <input type="text" v-model="pasatiempo">
-                <button type="submit" class="btn indigo darken-3">AGREGAR PASATIEMPO <i class="material-icons right">send</i></button>
+                <input type = "text" v-model="pasatiempo">
+                <button type = "submit" class="btn indigo darken-3">AGREGAR PASATIEMPO <i class="material-icons right">send</i></button>
                 <br>
                 <ul>
-                  <li v-for="pasatiempo in pasatiempos" v-bind:key="pasatiempo">
+                  <li v-for = "pasatiempo in pasatiempos" v-bind:key = "pasatiempo">
                       {{pasatiempo.id}} - {{pasatiempo.descripcion}}
-                      <a href="#!"><i class="material-icons">close</i></a>
+                      <a href = "#!"><i class = "material-icons">close</i></a>
                   </li>
                 </ul>
               </div>
             </form>
           </div>
-
-          <div class="row">
-            <div class="col m4">
+          <div class = "row">
+            <div class = "col m4">
               <label><input type="checkbox" v-model="suscrito"><span>suscribirse al boletin de noticias.</span></label>
             </div>
           </div>
           <div class = "row">
-            <button type="submit" class="btn indigo darken-4">AGREGAR USUARIO <i class="material-icons right">add_circle</i></button>
+            <button type = "submit" class="btn indigo darken-4">AGREGAR USUARIO <i class="material-icons right">add_circle</i></button>
           </div>
         </form> 
       </div>
@@ -79,7 +78,7 @@
             </tr>
           </thead>
           <tbody>
-              <tr v-for="usuario in usuarios" v-bind:key="usuario">
+              <tr v-for="usuario in usuarios" v-bind:key = "usuario">
                 <td>{{usuario.nombre}}</td>
                 <td>{{usuario.apellido}}</td>
                 <td>{{usuario.edad}}</td>
@@ -87,12 +86,12 @@
                 <td>{{usuario.correo}}</td>
                 <td>
                   <ul>
-                    <li v-for="pasatiempo in usuario.pasatiempos" v-bind:key="pasatiempo">{{pasatiempo.id}} - {{pasatiempo.descripcion}}</li>
+                    <li v-for = "pasatiempo in usuario.pasatiempos" v-bind:key = "pasatiempo">{{pasatiempo.id}} - {{pasatiempo.descripcion}}</li>
                   </ul>
                 </td>
-                <td><label><input type="checkbox" disabled v-model="usuario.suscrito"><span></span></label></td>
-                <td><a href="#!"><i class="material-icons">create</i></a></td>
-                <td><a href="#!"><i class="material-icons">delete</i></a></td>
+                <td><label><input type="checkbox" disabled v-model = "usuario.suscrito"><span></span></label></td>
+                <td><a href = "#!"><i class = "material-icons">create</i></a></td>
+                <td><a href = "#!"><i class = "material-icons">delete</i></a></td>
               </tr>
           </tbody>
         </table>
@@ -100,7 +99,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import M from 'materialize-css'
 export default {
@@ -166,12 +164,12 @@ export default {
 }
 </script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 </style>
